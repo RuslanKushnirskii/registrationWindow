@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<h1>Register</h1>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+                <div class="mb-3">
+                 <label for="exampleInputUsername1" class="form-label">Username</label>
+                 <input type="text" required minLenghth = "2" maxlength="10" pattern="[\x1F-\xBF]*" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp">
+                 <div id="usernameHelp" class="form-text">Your username must contain upper or lower case Latin letters or numbers from 0 to 9. The username length is 2-10 symbols.</div>
+            </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" required minLenghth = "6" maxlength="12" pattern="(?=^.{6,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[A-Z])(?=.[a-z]).*" class="form-control" id="exampleInputPassword1">
+                    <div id="passwordHelp" class="form-text">Your password must contain at least 1 upper and 1 lower case Latin letters and at least 1 number from 0 to 9. The minimum password length is 6 symbols.</div>
+                </div>
+            <button type="submit" class="btn-primary">Register</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>
