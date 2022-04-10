@@ -1,29 +1,64 @@
-<!DOCTYPE html>
-<h1>Register</h1>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css"/>
-</head>
-
-<body>
-    <div class="container">
-        <form action="">
-                <div class="mb-3">
-                 <label for="exampleInputUsername1" class="form-label">Username</label>
-                 <input type="text" required minLenghth = "2" maxlength="10" pattern="[\x1F-\xBF]*" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp">
-                 <div id="usernameHelp" class="form-text">Your username must contain upper or lower case Latin letters or numbers from 0 to 9. The username length is 2-10 symbols.</div>
-            </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" required minLenghth = "6" maxlength="12" pattern="(?=^.{6,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[A-Z])(?=.[a-z]).*" class="form-control" id="exampleInputPassword1">
-                    <div id="passwordHelp" class="form-text">Your password must contain at least 1 upper and 1 lower case Latin letters and at least 1 number from 0 to 9. The minimum password length is 6 symbols.</div>
-                </div>
-            <button type="submit" class="btn-primary">Register</button>
+<div id="container_demo" >
+    <a class="hiddenanchor" id="tosubscribe"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+    <link rel="stylesheet" href="style.css"/>
+    <div id="wrapper">
+        <div id="login" class="animate form">
+            <form  action="myshittyscript.php" autocomplete="on">
+                <h1>Log in</h1>
+                <p>
+                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                    <input id="username" name="username" required="required" pattern="[a-z][A-Z][0-9]" type="text" placeholder="example: mysernamename1337 or mymail1337@gmail.com"/>
+                </p>
+                <p>
+                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                    <input id="password" name="password" required="required" type="password" placeholder="example: ad1!yxG" />
+                </p>
+                <p class="keeplogin">
+                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                    <label for="loginkeeping">Keep me logged in</label>
+                </p>
+                <p class="login button">
+                    <input type="submit" value="Login" />
+                </p>
+                <p class="change_link">
+                    Not a member yet?
+                    <a href="#tosubscribe" class="to_subscribe">Join us</a>
+                </p>
+            </form>
         </div>
-        </form>
+ 
+        <div id="subscribe" class="animate form">
+            <form  action="myshittyscript.php" autocomplete="on">
+                <h1> Sign up </h1>
+                <p>
+                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                    <input id="usernamesignup" name="usernamesignup" required="required" pattern="[a-z][A-Z][0-9]" type="text" placeholder="mysernamename1337" />
+                </p>
+                <p>
+                    <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                    <input id="emailsignup" name="emailsignup" required="required" type="text" placeholder="mymail1337@gmail.com"/>
+                </p>
+                <p>
+                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="example: ad1!yxG"/>
+                </p>
+                <p>
+                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="example: ad1!yxG"/>
+                </p>
+                <p>
+                    <label for="profile_pic" class="file" data-icon="pic">Upload your profile picture </label>
+                    <input id="profile_pic" name="profile_pic" type="file">
+                </p>
+                <p class="signin button">
+                    <input type="submit" value="Sign up"/>
+                </p>
+                <p class="change_link">
+                    Already a member?
+                    <a href="#tologin" class="to_subscribe"> Go and log in </a>
+                </p>
+            </form>
+        </div>
     </div>
-
-</body>
-</html>
+</div>
